@@ -1,4 +1,4 @@
-const amount = 12;
+const amount = 8;
 
 if (amount < 10)
 {
