@@ -1,13 +1,8 @@
-const amount = 8;
+// Below are Globals(variables) - No WINDOW
 
-if (amount < 10)
-{
-    console.log('small number');
-}else
-{
-    console.log('large number');
-}
+// _dirname - path to the current directory
+// _filename - path to the current file (file name)
+// require - function to use modules (CommonJS)
+// module - info about current module (file)
+// process - info about env where the program is being executed
 
-console.log(`hey it's my first node app!`);
-
-// run node main.js in terminal to run the code
