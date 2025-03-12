@@ -3,7 +3,7 @@
 
 const names = require('./names'); // Importing the names module(This allows us to access the names module)[If you are accesing a file that is levels up you use (../names)]
 
-console.log(names);
+console.log(names);// This will print the names module object with the names Ngcobo and Mthatha.
 
 // Exporting the function
 // sayHi ('Slindo');
