@@ -1,19 +1,23 @@
-//CommomJS(library), every file in node is module (by default)
-//Modules - Encapsulated Code (only share minimum)
+//To interact with a built-in module, we just need to require it without('./').
 
-const names = require('./names'); // Importing the names module(This allows us to access the names module)[If you are accesing a file that is levels up you use (../names)]
-const sayHi = require('./functions'); // Importing the functions module(This allows us to access the functions module)
-const data = require('./alternative'); // Importing the alternative module(This allows us to access the alternative module)
+//os module(Operation System)
+const operSys = require('os');
 
-//When you import a file, the code in that file runs
-//The code in the imported file runs only once, even if you import it multiple times
-require('./minds'); // We can require/import a file without assigning it to a variable(This will run the minds module)
+// const { userInfo } = require('os'); //We use this if you know what property you want to use from the os module
 
-console.log(names);// This will print the names module object with the names Ngcobo and Mthatha.
-console.log(data);// This will print the alternative module object with items: ['item1', 'item2', 'item3'] and singlePerson: { name: 'Bhuri' }.
+//info about current user
+const user = operSys.userInfo();
+console.log(user);
 
+//method returns the system uptime in seconds
+console.log(`The system uptime is ${operSys.uptime()} seconds`);
 
-// Exporting the function
-sayHi ('Slindo');
-sayHi (names.Ngcobo); // This using property of the names module object
-sayHi (names.Mthatha); // This using property of the names module object
+const currentOS =
+{
+    name: operSys.type(), //Returns the operating system name
+    release: operSys.release(), //Returns the operating system release
+    totalMem: operSys.totalmem(), //Returns the total system memory in bytes
+    freeMem: operSys.freemem() //Returns the free system memory in bytes
+}
+
+console.log(currentOS);
