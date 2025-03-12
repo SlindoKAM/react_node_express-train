@@ -5,4 +5,5 @@ const sayHi = (name) =>
         console.log(`Hello there ${name}`);
     }
 
+//Exporting as default
 module.exports = sayHi; //Exporting the function
